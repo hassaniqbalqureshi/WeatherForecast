@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
-    <title>Weather Forecast</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
   </head>
   <body onload="DefaultScreen()">
     <div class="navbar">
@@ -14,11 +17,14 @@
     </div>
     <br />
     <br />
-    <center>
+    <center style="display: flex">
       <p id="inputContainer">City: <input type="text" id="cityInput" /></p>
-      <button type="button" onclick="GetInfo()">Click Me</button>
-      <h2 id="cityName">---London---</h2>
+      <button type="button" onclick="GetInfo()">
+        <i class="fa fa-search"></i>
+      </button>
     </center>
+    <br />
+    <h1 id="cityName" style="display: flex; margin-left: 14px">ISLAMABAD</h1>
 
     <div id="weatherContainer">
       <div id="iconsContainer">
@@ -27,40 +33,40 @@
           <div class="image">
             <img src="dots.png" class="imgClass" id="img1" />
           </div>
-          <p class="minValues" id="day1Min">Loading...</p>
-          <p class="maxValues" id="day1Max">Loading...</p>
+          <p class="minValues" id="day1Min">...</p>
+          <p class="maxValues" id="day1Max">...</p>
         </div>
         <div class="icons">
           <p class="weather" id="day2"></p>
           <div class="image">
             <img src="dots.png" class="imgClass" id="img2" />
           </div>
-          <p class="minValues" id="day2Min">Loading...</p>
-          <p class="maxValues" id="day2Max">Loading...</p>
+          <p class="minValues" id="day2Min">...</p>
+          <p class="maxValues" id="day2Max">...</p>
         </div>
         <div class="icons">
           <p class="weather" id="day3"></p>
           <div class="image">
             <img src="dots.png" class="imgClass" id="img3" />
           </div>
-          <p class="minValues" id="day3Min">Loading...</p>
-          <p class="maxValues" id="day3Max">Loading...</p>
+          <p class="minValues" id="day3Min">...</p>
+          <p class="maxValues" id="day3Max">...</p>
         </div>
         <div class="icons">
           <p class="weather" id="day4"></p>
           <div class="image">
             <img src="dots.png" class="imgClass" id="img4" />
           </div>
-          <p class="minValues" id="day4Min">Loading...</p>
-          <p class="maxValues" id="day4Max">Loading...</p>
+          <p class="minValues" id="day4Min">...</p>
+          <p class="maxValues" id="day4Max">...</p>
         </div>
         <div class="icons">
           <p class="weather" id="day5"></p>
           <div class="image">
             <img src="dots.png" class="imgClass" id="img5" />
           </div>
-          <p class="minValues" id="day5Min">Loading...</p>
-          <p class="maxValues" id="day5Max">Loading...</p>
+          <p class="minValues" id="day5Min">...</p>
+          <p class="maxValues" id="day5Max">...</p>
         </div>
       </div>
     </div>
