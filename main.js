@@ -19,7 +19,6 @@ function GetInfo() {
         document.getElementById("day" + (i + 1) + "Max").innerHTML =
           " " + Number(data.list[i].main.temp_max - 273.15).toFixed(2) + "°";
       }
-      //------------------------------------------------------------
 
       for (i = 0; i < 5; i++) {
         document.getElementById("img" + (i + 1)).src =
@@ -27,7 +26,26 @@ function GetInfo() {
           data.list[i].weather[0].icon +
           ".png";
       }
-      //------------------------------------------------------------
+      tempp = document.getElementById("current_temp").innerHTML;
+      document.getElementById("current_temp").innerHTML =
+        Number(data.list[1].main.temp_min - 273.15).toFixed(1) + " C ";
+
+      humid = document.getElementById("humidity").innerHTML;
+      document.getElementById("humidity").innerHTML = Number(
+        data.list[1].main.humidity
+      ).toFixed(1)  + "%";
+
+      pressure = document.getElementById("pressure").innerHTML;
+      document.getElementById("pressure").innerHTML = Number(
+        data.list[1].main.pressure
+      ).toFixed(2) + " hPa";
+
+      winnd = document.getElementById("windSpeed").innerHTML;
+      document.getElementById("windSpeed").innerHTML = Number(
+        data.list[1].wind.speed
+      ).toFixed(2) + " ms";
+
+
       console.log(data);
     })
 
@@ -61,3 +79,11 @@ function CheckDay(day) {
 for (i = 0; i < 5; i++) {
   document.getElementById("day" + (i + 1)).innerHTML = weekday[CheckDay(i)];
 }
+date = new Date();
+dayz = weekday[date.getDay()];
+document.getElementById("current_day").innerHTML = dayz;
+
+tempp = document.getElementById("current_temp").innerHTML;
+document.getElementById("current_temp").innerHTML = Number(
+  data.list[1].main.temp_min - 273.15
+).toFixed(1);

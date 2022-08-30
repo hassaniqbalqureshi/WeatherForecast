@@ -9,23 +9,39 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Document</title>
+    <title>Weather Application</title>
   </head>
   <body onload="DefaultScreen()">
     <div class="navbar">
       <a href="#home">Weather Forecast (5 DAYS)</a>
-    </div>
+    </div> 
     <br />
     <br />
-    <center style="display: flex">
-      <p id="inputContainer">City: <input type="text" id="cityInput" /></p>
+    <center>
+      <p id="inputContainer">
+        Search By Name: <input type="text" id="cityInput" />
+      </p>
       <button type="button" onclick="GetInfo()">
         <i class="fa fa-search"></i>
       </button>
     </center>
     <br />
-    <h1 id="cityName" style="display: flex; margin-left: 14px">ISLAMABAD</h1>
-
+    <div style="float: right; ">
+      <h3 id="humidity" ">...</h3>
+      <h3 id="pressure">...</h3>
+      <h3 id="windSpeed" ">...</h3>
+      </div>
+      
+    <div style="margin-left:200px">
+    
+    <h1 id="cityName">ISLAMABAD</h1>
+    <h2 id="current_day"</h2>
+    <h3 id="current_temp">...</h3>
+    </div>
+    
+    
+    
+    
     <div id="weatherContainer">
       <div id="iconsContainer">
         <div class="icons">
