@@ -12,12 +12,12 @@ function GetInfo() {
     .then((data) => {
       for (i = 0; i < 5; i++) {
         document.getElementById("day" + (i + 1) + "Min").innerHTML =
-          " " + Number(data.list[i].main.temp_min - 273.15).toFixed(1) + "°";
+          " " + Number(data.list[i].main.temp_min - 273.15).toFixed(0) + "°";
       }
 
       for (i = 0; i < 5; i++) {
         document.getElementById("day" + (i + 1) + "Max").innerHTML =
-          " " + Number(data.list[i].main.temp_max - 273.15).toFixed(2) + "°";
+          " " + Number(data.list[i].main.temp_max - 273.15).toFixed(0) + "°";
       }
 
       for (i = 0; i < 5; i++) {
@@ -31,17 +31,17 @@ function GetInfo() {
         Number(data.list[1].main.temp_min - 273.15).toFixed(1) + " C ";
 
       humid = document.getElementById("humidity").innerHTML;
-      document.getElementById("humidity").innerHTML = Number(
+      document.getElementById("humidity").innerHTML = "Humidity: " +Number(
         data.list[1].main.humidity
       ).toFixed(1)  + "%";
 
       pressure = document.getElementById("pressure").innerHTML;
-      document.getElementById("pressure").innerHTML = Number(
+      document.getElementById("pressure").innerHTML = "Pressure: " +Number(
         data.list[1].main.pressure
       ).toFixed(2) + " hPa";
 
       winnd = document.getElementById("windSpeed").innerHTML;
-      document.getElementById("windSpeed").innerHTML = Number(
+      document.getElementById("windSpeed").innerHTML = "Wind Speed: " +Number(
         data.list[1].wind.speed
       ).toFixed(2) + " ms";
 
